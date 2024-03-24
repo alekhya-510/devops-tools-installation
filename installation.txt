@@ -27,9 +27,15 @@ sudo apt-get install jenkins -y
 
 
 
+//apache2 installation
 
-
-
+#!/bin/bash
+sudo apt-get update
+sudo apt-get install -y apache2
+sudo systemctl start apache2
+cd /var/www/html
+sudo chown ubuntu:ubuntu /var/www/html/index.html
+echo "<html><h1>Hello from EC2 User</h1></html>" > index.html
 
 
 
